@@ -40,7 +40,10 @@ footer p {
 }
 
 .pro{
-   size: 50vh;
+    
+        max-width: 40%;
+        height: auto;
+      
 }
 
 .weather-guid{
