@@ -9,6 +9,10 @@ const { response } = require("express");
 //Get express server
 const app = express();
 
+const port = process.env.PORT || 3000;
+
+console.log(process.env.PORT);
+
 //set express server to use the hbs view engine  
 app.set("view engine", "hbs");
 
@@ -24,7 +28,6 @@ hbs.registerPartials(partiaslPath);
 //registering the static file path
 app.use(express.static(publicDirectoryPath));
 
-console.log("helo");
 
 const auther = "saseendra";
 
@@ -105,6 +108,6 @@ app.get("*" , (req , res) =>{
     })
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("server is running");
 });

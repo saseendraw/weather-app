@@ -18,7 +18,7 @@ weatherForm.addEventListener("submit" , (event)=>{
         messege1.textContent = "please provide an address";
         messege1.classList.add("error");
     }else {
-        fetch("http://localhost:3000/weather?address=" +location).then( (response) => {
+        fetch("/weather?address=" +location).then( (response) => {
 
             response.json().then((data)=> {
                 if(data.error){
