@@ -24,6 +24,7 @@ hbs.registerPartials(partiaslPath);
 //registering the static file path
 app.use(express.static(publicDirectoryPath));
 
+console.log("helo");
 
 const auther = "saseendra";
 
